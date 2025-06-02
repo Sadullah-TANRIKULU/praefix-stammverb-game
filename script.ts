@@ -1,0 +1,169 @@
+const examples: IDataGerman[] = 
+[
+  { sentence: "Ich _bringe den Tag am See.", prefix: "ver", meaning: "verbringen = Zeit an einem Ort sein" },
+  { sentence: "Kannst du das Licht _machen?", prefix: "an", meaning: "anmachen = einschalten" },
+  { sentence: "Ich _mache das Fenster.", prefix: "auf", meaning: "aufmachen = öffnen" },
+  { sentence: "Bitte _mach die Tür.", prefix: "zu", meaning: "zumachen = schließen" },
+  { sentence: "Ich _mache den Fernseher.", prefix: "aus", meaning: "ausmachen = ausschalten" },
+  { sentence: "Wir _machen einen Termin.", prefix: "ab", meaning: "abmachen = vereinbaren" },
+  { sentence: "Mein Großvater _macht mir sein Auto.", prefix: "ver", meaning: "vermachen = schenken/nach dem Tod geben" },
+
+  { sentence: "Ich _nehme einen Apfel.", prefix: "", meaning: "nehmen = greifen, nehmen" },
+  { sentence: "Ich _nehme das Bild von der Wand.", prefix: "ab", meaning: "abnehmen = wegnehmen" },
+  { sentence: "Ich _nehme das Gespräch.", prefix: "auf", meaning: "aufnehmen = aufzeichnen" },
+  { sentence: "Ich _nehme meine Tabletten.", prefix: "ein", meaning: "einnehmen = zu sich nehmen" },
+  { sentence: "Ich _nehme die Aufgabe.", prefix: "über", meaning: "übernehmen = übernehmen, übernehmen" },
+  { sentence: "Der Arzt _nimmt Blut.", prefix: "ent", meaning: "entnehmen = herausnehmen" },
+  { sentence: "Die Polizei _nimmt den Zeugen.", prefix: "ver", meaning: "vernehmen = befragen" },
+  { sentence: "Ich _nehme im Winter oft.", prefix: "zu", meaning: "zunehmen = schwerer werden" },
+
+  { sentence: "Kannst du bitte meine Tasche _halten?", prefix: "", meaning: "halten = festhalten" },
+  { sentence: "Ich _halte das Geschenk.", prefix: "be", meaning: "behalten = nicht weggeben" },
+  { sentence: "Ich _halte einen Brief.", prefix: "er", meaning: "erhalten = bekommen" },
+  { sentence: "Die Flasche _hält Wasser.", prefix: "ent", meaning: "enthalten = drin haben" },
+  { sentence: "Er _hält sich freundlich.", prefix: "ver", meaning: "verhalten = benehmen" },
+  { sentence: "Der Regen _hält mich vom Laufen.", prefix: "ab", meaning: "abhalten = verhindern" },
+  { sentence: "Ich _halte den Lärm nicht.", prefix: "aus", meaning: "aushalten = ertragen" },
+  { sentence: "Der Bus _hält an der Haltestelle.", prefix: "an", meaning: "anhalten = stoppen" },
+
+  { sentence: "Ich _stelle die Tasse auf den Tisch.", prefix: "", meaning: "stellen = hinstellen" },
+  { sentence: "Ich _stelle das Fahrrad.", prefix: "ab", meaning: "abstellen = ablegen, parken" },
+  { sentence: "Ich _stelle mich hinten.", prefix: "an", meaning: "anstellen = sich einreihen" },
+  { sentence: "Wir _stellen das Zelt.", prefix: "auf", meaning: "aufstellen = aufbauen" },
+  { sentence: "Das Museum _stellt Bilder.", prefix: "aus", meaning: "ausstellen = präsentieren" },
+  { sentence: "Ich _stelle eine Pizza.", prefix: "be", meaning: "bestellen = ordern" },
+  { sentence: "Die Firma _stellt neue Mitarbeiter.", prefix: "ein", meaning: "einstellen = anstellen" },
+  { sentence: "Ich _stelle dir meinen Freund.", prefix: "vor", meaning: "vorstellen = bekannt machen" },
+  { sentence: "Das Bild _stellt einen Hund.", prefix: "dar", meaning: "darstellen = zeigen" },
+  { sentence: "Die Firma _stellt Autos.", prefix: "her", meaning: "herstellen = produzieren" },
+
+  { sentence: "Ich _setze mich auf den Stuhl.", prefix: "", meaning: "setzen = sich hinsetzen" },
+  { sentence: "Ich _setze die Brille.", prefix: "ab", meaning: "absetzen = abnehmen" },
+  { sentence: "Ich _setze die Mütze.", prefix: "auf", meaning: "aufsetzen = auf den Kopf tun" },
+  { sentence: "Der Bus _setzt mich an der Schule.", prefix: "aus", meaning: "aussetzen = absetzen" },
+  { sentence: "Ich _setze meine Brille.", prefix: "ein", meaning: "einsetzen = benutzen" },
+  { sentence: "Die Firma _setzt die Idee.", prefix: "um", meaning: "umsetzen = realisieren" },
+  { sentence: "Der Platz ist _setzt.", prefix: "be", meaning: "besetzen = einnehmen" },
+  { sentence: "Ich _setze die Batterie.", prefix: "er", meaning: "ersetzen = austauschen" },
+
+  { sentence: "Ich _schreibe einen Brief.", prefix: "", meaning: "schreiben = einen Text verfassen" },
+  { sentence: "Kannst du das Bild _schreiben?", prefix: "be", meaning: "beschreiben = erklären" },
+  { sentence: "Der Arzt _schreibt mir Medikamente.", prefix: "ver", meaning: "verschreiben = aufschreiben" },
+  { sentence: "Ich _schreibe die Hausaufgaben.", prefix: "ab", meaning: "abschreiben = kopieren" },
+  { sentence: "Ich _schreibe mich an der Uni.", prefix: "ein", meaning: "einschreiben = anmelden" },
+  { sentence: "Ich _schreibe den Vertrag.", prefix: "unter", meaning: "unterschreiben = signieren" },
+
+  { sentence: "Ich _spreche Deutsch.", prefix: "", meaning: "sprechen = reden" },
+  { sentence: "Wir _sprechen das Problem.", prefix: "be", meaning: "besprechen = diskutieren" },
+  { sentence: "Ich _spreche dir zu helfen.", prefix: "ver", meaning: "versprechen = zusagen" },
+  { sentence: "Kannst du ihn _sprechen?", prefix: "an", meaning: "ansprechen = Kontakt aufnehmen" },
+  { sentence: "Ich kann das Wort nicht _sprechen.", prefix: "aus", meaning: "aussprechen = artikulieren" },
+  { sentence: "Wir _sprechen den Termin.", prefix: "ab", meaning: "absprechen = vereinbaren" },
+  { sentence: "Das _spricht meinen Erwartungen.", prefix: "ent", meaning: "entsprechen = passend sein" },
+
+  { sentence: "Ich _fahre mit dem Auto.", prefix: "", meaning: "fahren = mit einem Fahrzeug bewegen" },
+  { sentence: "Der Zug _fährt um 8 Uhr.", prefix: "ab", meaning: "abfahren = losfahren" },
+  { sentence: "Der Bus _fährt jetzt.", prefix: "an", meaning: "anfahren = starten" },
+  { sentence: "Wir _fahren am Wochenende aus der Stadt.", prefix: "aus", meaning: "ausfahren = hinausfahren" },
+  { sentence: "Der Zug _fährt in den Bahnhof.", prefix: "ein", meaning: "einfahren = hineinfahren" },
+  { sentence: "Ich habe die Nachricht gestern _fahren.", prefix: "er", meaning: "erfahren = etwas Neues hören" },
+  { sentence: "Der Autofahrer hat die rote Ampel _fahren.", prefix: "über", meaning: "überfahren = drüberfahren" },
+
+  { sentence: "Ich _komme morgen zu dir.", prefix: "", meaning: "kommen = sich bewegen" },
+  { sentence: "Der Zug _kommt pünktlich.", prefix: "an", meaning: "ankommen = eintreffen" },
+  { sentence: "Ich _komme gut mit meinen Kollegen.", prefix: "aus", meaning: "auskommen = sich verstehen" },
+  { sentence: "Ich _komme ein Geschenk.", prefix: "be", meaning: "bekommen = erhalten" },
+  { sentence: "Der Dieb ist der Polizei _kommen.", prefix: "ent", meaning: "entkommen = fliehen" },
+  { sentence: "So etwas _kommt oft.", prefix: "vor", meaning: "vorkommen = passieren" },
+  { sentence: "Mich _kommt ein komisches Gefühl.", prefix: "über", meaning: "überkommen = plötzlich fühlen" },
+
+  { sentence: "Ich _gehe zur Schule.", prefix: "", meaning: "gehen = laufen" },
+  { sentence: "Wir _gehen am Abend.", prefix: "aus", meaning: "ausgehen = weggehen" },
+  { sentence: "Die Pflanze ist _gegangen.", prefix: "ein", meaning: "eingehen = sterben" },
+  { sentence: "Ich kann gut mit Stress _gehen.", prefix: "um", meaning: "umgehen = bewältigen" },
+  { sentence: "Er _geht einen Fehler.", prefix: "be", meaning: "begehen = machen" },
+  { sentence: "Die Zeit _geht schnell.", prefix: "ver", meaning: "vergehen = vorbeigehen" },
+  { sentence: "Mir ist nichts _gangen.", prefix: "ent", meaning: "entgehen = verpassen" },
+
+  { sentence: "Ich _gebe dir das Buch.", prefix: "", meaning: "geben = überreichen" },
+  { sentence: "Ich _gebe meine Hausaufgabe.", prefix: "ab", meaning: "abgeben = einreichen" },
+  { sentence: "Er _gibt das Rauchen.", prefix: "auf", meaning: "aufgeben = aufhören" },
+  { sentence: "Zwei und zwei _geben vier.", prefix: "er", meaning: "ergeben = das Resultat sein" },
+  { sentence: "Ich _gebe dir den Fehler.", prefix: "ver", meaning: "vergeben = verzeihen" },
+  { sentence: "Ich _gebe viel Geld.", prefix: "aus", meaning: "ausgeben = Geld bezahlen" },
+  { sentence: "Er _gibt mit seinem Auto.", prefix: "an", meaning: "angeben = prahlen" },
+
+  { sentence: "Ich _sehe einen Vogel.", prefix: "", meaning: "sehen = mit den Augen wahrnehmen" },
+  { sentence: "Ich _sehe mir einen Film.", prefix: "an", meaning: "ansehen = anschauen" },
+  { sentence: "Ich habe das Schild _sehen.", prefix: "über", meaning: "übersehen = nicht bemerken" },
+  { sentence: "Ich habe mich _sehen.", prefix: "ver", meaning: "versehen = einen Fehler machen" },
+  { sentence: "Das Ende ist nicht _sehen.", prefix: "ab", meaning: "absehen = vorhersehen" },
+  { sentence: "Du _siehst müde.", prefix: "aus", meaning: "aussehen = wirken" },
+  { sentence: "Ich _sehe meinen Fehler.", prefix: "ein", meaning: "einsehen = erkennen" },
+
+  { sentence: "Ich _lege das Buch auf den Tisch.", prefix: "", meaning: "legen = hinlegen" },
+  { sentence: "Ich _lege meine Jacke.", prefix: "ab", meaning: "ablegen = ausziehen" },
+  { sentence: "Ich _lege einen Garten.", prefix: "an", meaning: "anlegen = bauen" },
+  { sentence: "Ich _lege den Teppich.", prefix: "aus", meaning: "auslegen = ausbreiten" },
+  { sentence: "Ich _lege die CD.", prefix: "ein", meaning: "einlegen = hineintun" },
+  { sentence: "Ich _belege einen Deutschkurs.", prefix: "be", meaning: "belegen = teilnehmen" },
+  { sentence: "Ich _lege meine Antwort.", prefix: "über", meaning: "überlegen = nachdenken" },
+
+  { sentence: "Ich _laufe jeden Morgen.", prefix: "", meaning: "laufen = rennen" },
+  { sentence: "Die Frist _läuft morgen.", prefix: "ab", meaning: "ablaufen = enden" },
+  { sentence: "Der Motor _läuft an.", prefix: "an", meaning: "anlaufen = starten" },
+  { sentence: "Die Milch _läuft aus.", prefix: "aus", meaning: "auslaufen = herausfließen" },
+  { sentence: "Ich habe mich _laufen.", prefix: "ver", meaning: "verlaufen = den Weg verlieren" },
+  { sentence: "Das Wasser _läuft über.", prefix: "über", meaning: "überlaufen = zu viel werden" },
+  { sentence: "Die Hose ist _gelaufen.", prefix: "ein", meaning: "einlaufen = kleiner werden" },
+
+  { sentence: "Ich _ziehe den Schrank.", prefix: "", meaning: "ziehen = etwas bewegen" },
+  { sentence: "Ich _ziehe die Folie.", prefix: "ab", meaning: "abziehen = entfernen" },
+  { sentence: "Ich _ziehe meine Jacke.", prefix: "an", meaning: "anziehen = Kleidung anlegen" },
+  { sentence: "Ich _ziehe meine Schuhe.", prefix: "aus", meaning: "ausziehen = Kleidung ausziehen" },
+  { sentence: "Ich _ziehe in eine neue Wohnung.", prefix: "ein", meaning: "einziehen = umziehen" },
+  { sentence: "Ich _beziehe meine Wohnung.", prefix: "be", meaning: "beziehen = einziehen" },
+  { sentence: "Ich _ziehe nach Zürich.", prefix: "um", meaning: "umziehen = den Wohnort wechseln" },
+
+  { sentence: "Ich _bringe dir einen Kaffee.", prefix: "", meaning: "bringen = geben, liefern" },
+  { sentence: "Ich _bringe meinen Freund.", prefix: "mit", meaning: "mitbringen = mitnehmen" },
+  { sentence: "Ich kann ihn nicht von seiner Meinung _bringen.", prefix: "ab", meaning: "abbringen = überzeugen, ändern" },
+  { sentence: "Ich _bringe das Bild an der Wand.", prefix: "an", meaning: "anbringen = befestigen" },
+  { sentence: "Der Bauer _bringt Dünger.", prefix: "aus", meaning: "ausbringen = verteilen" },
+  { sentence: "Ich _bringe meine Ideen.", prefix: "ein", meaning: "einbringen = beitragen" },
+  { sentence: "Ich _bringe den Tag am See.", prefix: "ver", meaning: "verbringen = Zeit verbringen" }
+];
+  
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("./dist/service-worker.js")
+    .then((reg) => console.log("Service Worker registered!", reg))
+    .catch((err) => console.error("Service Worker registration failed:", err));
+}
+
+let current: number = 0;
+
+function showSentence() {
+  const s = examples[current];
+  (document.getElementById("sentence") as HTMLElement).innerText = s.sentence;
+  (document.getElementById("prefixInput") as HTMLInputElement).value = "";
+  (document.getElementById("feedback") as HTMLElement).innerText = "";
+}
+
+function check() {
+  const input = (document.getElementById("prefixInput") as HTMLInputElement).value.trim();
+  const correct = examples[current].prefix;
+  const feedback = (document.getElementById("feedback") as HTMLElement);
+  if (input === correct) {
+    feedback.innerHTML = "Richtig!  <img src='./assets/angry birds_yellow bird_icon_512.png' alt='bird' width='20' height='20' />";
+  } else {
+    feedback.innerHTML = `Falsch! <img src='./assets/angry birds_black bird_icon_512.png' alt='bird' width='20' height='20' /> <br> Richtig wäre:    <span id="correctPrefix">${correct}</span>`;
+  }
+  current = (current + 1) % examples.length;
+  setTimeout(showSentence, 1500);
+}
+
+document.getElementById("checkBtn")!.addEventListener("click", check);
+showSentence();
+

@@ -1,0 +1,29 @@
+{
+  "name": "Präfix-Stammverb-Game-App",
+  "short_name": "Präfix-Stammverb-Game",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./assets/angry birds_red bird_icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./assets/angry birds_black bird_icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./assets/angry birds_yellow bird_icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./assets/angry birds_green bird_icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+
+  ]
+}

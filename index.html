@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/angry birds_red bird_icon_512.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./input.css" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./scrollstyle.css" />
+    <title>Präfix-Stammverb-Spiel</title>
+  </head>
+
+  <body class="kanit-regular">
+    <main style="height: 90vh">
+      <section class="sec-1">
+        <h2>Präfix-Stammverb-Spiel</h2>
+        <span
+          >anhand
+          <img
+            src="./assets/angry birds_green bird_icon_512.png"
+            alt="bird"
+            width="20"
+            height="20"
+        /></span>
+        <br /><br /><br />
+        <div id="game">
+          <fieldset>
+            <legend>Präfixe</legend>
+            <p>
+              ent-, an-, über-, ver-, ab-, aus-, ein-, be-, um-, mit-, vor-,
+              er-, zer-, unter-, auf-, her-, dar-, zu-, usw.
+            </p>
+          </fieldset>
+          <br />
+          <p id="sentence"></p>
+          <br /><br />
+          <input type="text" id="prefixInput" placeholder="Präfix" />
+          <button id="checkBtn">Prüfen</button>
+          <p id="feedback"></p>
+        </div>
+      </section>
+      <section class="sec-2">
+        <a href="./lernblatt.html" style="text-decoration: none"
+          >Lernblatt der Verben mit Präfix (die Bedeutungen)</a
+        >
+      </section>
+    </main>
+    <footer>
+      <a
+        href="https://www.iconfinder.com/iconsets/angry-icons-by-femfoyou"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="position: fixed; bottom: 0; left: 0; font-size: xx-small"
+        >iconfinder.com/iconsets</a
+      >
+    </footer>
+    <script src="./dist/script.js" defer></script>
+  </body>
+</html>
