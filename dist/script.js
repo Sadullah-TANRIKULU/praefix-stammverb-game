@@ -132,7 +132,7 @@ function showSentence() {
     document.getElementById("feedback").innerText = "";
 }
 function check() {
-    const input = document.getElementById("prefixInput").value.trim();
+    const input = document.getElementById("prefixInput").value.trim().toLowerCase();
     const correct = examples[current].prefix;
     const feedback = document.getElementById("feedback");
     if (input === correct) {
@@ -141,7 +141,8 @@ function check() {
     else {
         feedback.innerHTML = `Falsch! <img src='./assets/angry birds_black bird_icon_512.png' alt='bird' width='20' height='20' /> <br> Richtig wäre:    <span id="correctPrefix">${correct}</span>`;
     }
-    current = (current + 1) % examples.length;
+    current = Math.floor(Math.random() * examples.length);
+    console.log(`Current index: ${current}, Total examples: ${examples.length}`);
     setTimeout(showSentence, 1500);
 }
 document.getElementById("checkBtn").addEventListener("click", check);
