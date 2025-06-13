@@ -609,7 +609,7 @@ if ("serviceWorker" in navigator) {
 }
 
 let current: number = 0;
-let richtigZahler: number = 9;
+let richtigZahler: number = 0;
 
 function showSentence() {
   const s = examples[current];

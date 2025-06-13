@@ -593,7 +593,7 @@ if ("serviceWorker" in navigator) {
         .catch((err) => console.error("Service Worker registration failed:", err));
 }
 let current = 0;
-let richtigZahler = 9;
+let richtigZahler = 0;
 function showSentence() {
     const s = examples[current];
     document.getElementById("sentence").innerText = s.sentence;
