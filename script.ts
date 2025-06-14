@@ -646,4 +646,12 @@ function check() {
 }
 
 document.getElementById("checkBtn")!.addEventListener("click", check);
+
+(document.getElementById("prefixInput") as HTMLInputElement).addEventListener("keyup", (event: KeyboardEvent) => {
+    if (event.key === "Enter") {
+        check();
+    }
+});
+
 showSentence();
+

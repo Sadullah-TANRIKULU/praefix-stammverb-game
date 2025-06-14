@@ -626,4 +626,9 @@ function check() {
     setTimeout(showSentence, 1500);
 }
 document.getElementById("checkBtn").addEventListener("click", check);
+document.getElementById("prefixInput").addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        check();
+    }
+});
 showSentence();
